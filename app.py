@@ -4,7 +4,6 @@ New: Email settings page, send test email, automated weekly/monthly reports.
 """
 
 import streamlit as st
-import os
 import pandas as pd
 import plotly.express as px
 from datetime import date, datetime, timedelta
@@ -16,7 +15,7 @@ import scheduler as sc
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Norah · Finance Tracker",
-    page_icon="norah.jpg",
+   page_icon=Image.open("norah.jpg"),
     layout="wide",
     initial_sidebar_state="expanded",
 )
