@@ -1,0 +1,17 @@
+[theme]
+# Clean dark-ish professional theme
+primaryColor = "#4F8EF7"
+backgroundColor = "#0F1117"
+secondaryBackgroundColor = "#1C1E26"
+textColor = "#FAFAFA"
+font = "sans serif"
+
+[server]
+# Allows running on Streamlit Cloud without issues
+headless = true
+enableCORS = false
+enableXsrfProtection = false
+
+[browser]
+# Disables the "Deploy" button prompt in development
+gatherUsageStats = false
