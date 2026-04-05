@@ -7,15 +7,23 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from datetime import date, datetime, timedelta
+from PIL import Image
+import os
 import database as db
 import csv_importer as ci
 import email_reporter as er
 import scheduler as sc
 
 # ── Page config ───────────────────────────────────────────────────────────────
+# Use custom photo as icon if it exists, otherwise fall back to emoji
+if os.path.exists("norah.jpg"):
+    page_icon = Image.open("norah.jpg")
+else:
+    page_icon = "💰"
+
 st.set_page_config(
     page_title="Norah · Finance Tracker",
-   page_icon=Image.open("norah.jpg"),
+    page_icon=page_icon,
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -47,8 +55,6 @@ def month_label(m):
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
-    if os.path.exists("norah.jpg"):
-        st.image("norah.jpg", width=150)
     st.markdown("## 💰 Norah")
     st.markdown("*Your personal finance tracker*")
     st.markdown("---")
