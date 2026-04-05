@@ -15,7 +15,7 @@ import scheduler as sc
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Norah · Finance Tracker",
-    page_icon="💰",
+    page_icon="norah.jpg",
     layout="wide",
     initial_sidebar_state="expanded",
 )
