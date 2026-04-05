@@ -47,6 +47,8 @@ def month_label(m):
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
+    if os.path.exists("norah.jpg"):
+        st.image("norah.jpg", width=150)
     st.markdown("## 💰 Norah")
     st.markdown("*Your personal finance tracker*")
     st.markdown("---")
