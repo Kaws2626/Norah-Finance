@@ -4,6 +4,7 @@ New: Email settings page, send test email, automated weekly/monthly reports.
 """
 
 import streamlit as st
+import os
 import pandas as pd
 import plotly.express as px
 from datetime import date, datetime, timedelta
