@@ -31,6 +31,18 @@ st.set_page_config(
 db.init_db()
 sc.init_settings()
 
+# ── Inject PWA manifest for home screen icon ──────────────────────────────────
+st.markdown(
+    """
+    <link rel="manifest" href="/app/static/manifest.json">
+    <link rel="apple-touch-icon" href="/app/static/icon_192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Norah">
+    """,
+    unsafe_allow_html=True,
+)
+
 # ── Run scheduler silently on every page load ─────────────────────────────────
 scheduler_messages = sc.run_scheduler()
 
